@@ -1,0 +1,21 @@
+// C++ code
+//
+int interruptor = 0;
+
+void setup()
+{
+  pinMode(11, INPUT);
+  pinMode(12, OUTPUT);
+}
+
+void loop()
+{
+  if (digitalRead(11) < HIGH) {
+    digitalWrite(12, HIGH);
+    delay(1000); // Wait for 1000 millisecond(s)
+    digitalWrite(12, LOW);
+    delay(1000); // Wait for 1000 millisecond(s)
+  } else {
+    digitalWrite(12, LOW);
+  }
+} 
